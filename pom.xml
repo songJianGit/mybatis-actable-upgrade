@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.xxsowrd.xitem</groupId>
+    <groupId>com.xxsword.xitem</groupId>
     <artifactId>mybatis-actable-upgrade</artifactId>
-    <version>1.5.1</version>
+    <version>1.5.2</version>
 
     <name>mybatis-enhance-actable</name>
-    <description>A.CTable is a Maven project based on Spring and Mybatis, which enhances the function of Mybatis
+    <description>The Maven project based on Spring and Mybatis has enhanced the functionality of Mybatis.
     </description>
     <url>https://github.com/songJianGit/mybatis-actable-upgrade</url>
 
@@ -29,8 +29,8 @@
         <developer>
             <name>youqu</name>
             <email>2443904383@qq.com</email>
-            <organization>shanghai</organization>
-            <url>https://github.com/songJianGit/A.CTable-Frame</url>
+            <organization>youqu</organization>
+            <url>https://ssword.cn/f</url>
         </developer>
     </developers>
 
@@ -41,7 +41,7 @@
     </scm>
 
     <properties>
-        <spring.version>5.2.25.RELEASE</spring.version>
+        <spring.version>5.3.34</spring.version>
     </properties>
 
     <dependencies>
@@ -162,8 +162,7 @@
                             <goal>sign</goal>
                         </goals>
                         <configuration>
-                            <keyname>密钥对指纹</keyname>
-                            <passphraseServerId>密钥对指纹</passphraseServerId>
+                            <keyname>密钥对的指纹</keyname>
                         </configuration>
                     </execution>
                 </executions>

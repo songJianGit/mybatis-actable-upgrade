@@ -4,33 +4,33 @@ import java.util.Map;
 
 public class SaveOrUpdateDataCommand {
 
-	private Long id;
+    private Long id;
 
-	private Map<Object, Map<Object, Object>> tableMap;
+    private Map<Object, Map<Object, Object>> tableMap;
 
-	public SaveOrUpdateDataCommand(){
+    public SaveOrUpdateDataCommand(){
 
-	}
+    }
 
-	public SaveOrUpdateDataCommand(Map<Object, Map<Object, Object>> tableMap){
-		this.tableMap = tableMap;
-	}
+    public SaveOrUpdateDataCommand(Map<Object, Map<Object, Object>> tableMap){
+        this.tableMap = tableMap;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public Map<Object, Map<Object, Object>> getTableMap() {
-		return tableMap;
-	}
+    public Map<Object, Map<Object, Object>> getTableMap() {
+        return tableMap;
+    }
 
-	public void setTableMap(Map<Object, Map<Object, Object>> tableMap) {
-		this.tableMap = tableMap;
-	}
+    public void setTableMap(Map<Object, Map<Object, Object>> tableMap) {
+        this.tableMap = tableMap;
+    }
 
 }
 

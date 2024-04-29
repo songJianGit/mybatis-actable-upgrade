@@ -19,7 +19,7 @@ public @interface TableComment {
 
     /**
      * 表注释
-	 * @return
+	 * @return String
      */
 	String value();
 }

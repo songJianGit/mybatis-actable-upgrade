@@ -102,7 +102,7 @@ public class ConfigurationUtil implements ApplicationContextAware {
 	 *
 	 * @param key
 	 *            properties
-	 * @return
+	 * @return String
 	 */
 	public String getConfig(String key) {
 		if(Constants.ACTABLE_DATABASE_TYPE_KEY.equals(key) || Constants.DATABASE_TYPE_KEY.equals(key)) {

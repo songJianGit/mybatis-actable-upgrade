@@ -85,19 +85,19 @@ public interface CreateMysqlTablesMapper {
 
 	/**
 	 * 删除表索引
-	 * @param tableMap
+	 * @param tableMap tableMap
 	 */
 	public void dropTabelIndex(@Param("tableMap") Map<String, Object> tableMap);
 
 	/**
 	 * 创建索引
-	 * @param tableMap
+	 * @param tableMap tableMap
 	 */
 	public void addTableIndex(@Param("tableMap") Map<String, Object> tableMap);
 
 	/**
 	 * 创建唯一约束
-	 * @param tableMap
+	 * @param tableMap tableMap
 	 */
 	public void addTableUnique(@Param("tableMap") Map<String, Object> tableMap);
 

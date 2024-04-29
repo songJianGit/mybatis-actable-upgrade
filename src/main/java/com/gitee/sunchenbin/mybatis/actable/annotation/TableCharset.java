@@ -22,7 +22,7 @@ public @interface TableCharset {
     /**
      * 表注释
 	 * 仅支持com.gitee.sunchenbin.mybatis.actable.constants.MySqlCharsetConstant中的枚举字符集
-	 * @return
+	 * @return MySqlCharsetConstant
      */
 	MySqlCharsetConstant value();
 }

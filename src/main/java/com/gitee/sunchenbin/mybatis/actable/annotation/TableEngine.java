@@ -22,7 +22,7 @@ public @interface TableEngine {
     /**
      * 表引擎
 	 * 仅支持com.gitee.sunchenbin.mybatis.actable.constants.MySqlEngineConstant中的存储引擎枚举
-	 * @return
+	 * @return MySqlEngineConstant
      */
 	MySqlEngineConstant value();
 }

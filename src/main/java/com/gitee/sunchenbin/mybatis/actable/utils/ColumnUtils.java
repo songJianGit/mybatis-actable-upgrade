@@ -389,7 +389,7 @@ public class ColumnUtils {
      *
      * @param tableName 表名
      * @param pattern   时间格式
-     * @return
+     * @return String
      */
     public static String appendTimeSuffix(String tableName, String pattern) {
         String suffix = "";

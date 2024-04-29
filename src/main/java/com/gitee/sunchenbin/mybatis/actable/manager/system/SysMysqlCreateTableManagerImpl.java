@@ -430,8 +430,8 @@ public class SysMysqlCreateTableManagerImpl implements SysMysqlCreateTableManage
                             + createTableParam.getFieldDecimalLength() + ")";
                 }
 
-                // 判断类型+长度是否相同（mysql从8.0.17版本开始，int(11)在表结构中，显示为int，并且不受设置的显示宽度影响，不论设置多长，都将会是int(11)）
-                if (!sysColumn.getColumn_type().toLowerCase().equals(typeAndLength) && !(sysColumn.getColumn_type().equalsIgnoreCase("int") && typeAndLength.equals("int(11)"))) {
+                // 判断类型+长度是否相同
+                if (!sysColumn.getColumn_type().toLowerCase().equals(typeAndLength) && filterIntLength(sysColumn.getColumn_type().toLowerCase(), typeAndLength)) {
                     modifyFieldList.add(modifyTableParam);
                     continue;
                 }
@@ -492,6 +492,26 @@ public class SysMysqlCreateTableManagerImpl implements SysMysqlCreateTableManage
             }
         }
         return modifyFieldList;
+    }
+
+    /**
+     * mysql从8.0.17版本开始，整数相关的几个类型，不再设置显示宽度，这里做一下兼容判断，防止重复更新表字段
+     *
+     * @param dbColumn      数据库的字段信息
+     * @param typeAndLength 代码实体里的字段信息
+     * @return false-不用处理该字段 true-需要处理
+     */
+    private boolean filterIntLength(String dbColumn, String typeAndLength) {
+        if ("int".equals(dbColumn) && "int(11)".equals(typeAndLength)) {
+            return false;
+        }
+        if ("smallint".equals(dbColumn) && "smallint(6)".equals(typeAndLength)) {
+            return false;
+        }
+        if ("bigint".equals(dbColumn) && "bigint(20)".equals(typeAndLength)) {
+            return false;
+        }
+        return true;
     }
 
     /**

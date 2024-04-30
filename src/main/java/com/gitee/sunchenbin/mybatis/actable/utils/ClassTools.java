@@ -172,7 +172,7 @@ public class ClassTools {
      *
      * @param objList   对象
      * @param fieldName 字段名
-     * @return 属性值
+     * @return 属性值 属性值
      */
     public static <T, E> List<E> getPropertyValueList(List<T> objList, String fieldName) {
         List<E> list = new ArrayList<E>();

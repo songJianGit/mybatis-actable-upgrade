@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xxsword.xitem</groupId>
     <artifactId>mybatis-actable-upgrade</artifactId>
-    <version>1.6.1</version>
+    <version>1.6.2</version>
 
     <name>mybatis-enhance-actable</name>
     <description>The Maven project based on Spring and Mybatis has enhanced the functionality of Mybatis.

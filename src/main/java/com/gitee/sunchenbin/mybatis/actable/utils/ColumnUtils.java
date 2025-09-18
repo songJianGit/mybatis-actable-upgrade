@@ -10,15 +10,14 @@ import com.gitee.sunchenbin.mybatis.actable.command.MySqlTypeAndLength;
 import com.gitee.sunchenbin.mybatis.actable.constants.MySqlCharsetConstant;
 import com.gitee.sunchenbin.mybatis.actable.constants.MySqlEngineConstant;
 import com.gitee.sunchenbin.mybatis.actable.constants.MySqlTypeConstant;
-//import com.google.common.base.CaseFormat;
-import org.apache.commons.lang.time.DateFormatUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
 
 import javax.persistence.Id;
 import java.lang.reflect.Field;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Date;
 
 public class ColumnUtils {
 
@@ -394,7 +393,8 @@ public class ColumnUtils {
     public static String appendTimeSuffix(String tableName, String pattern) {
         String suffix = "";
         try {
-            suffix = DateFormatUtils.format(new Date(), pattern);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+            suffix = LocalDateTime.now().format(formatter);
         } catch (Exception e) {
             throw new RuntimeException("无法转换时间格式" + pattern);
         }
